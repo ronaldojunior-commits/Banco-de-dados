@@ -1,0 +1,40 @@
+
+-- create
+CREATE TABLE USER (
+  id INT,
+   name varchar(254) NOT NULL,
+   email varchar(254) NOT NULL,
+   cpf char(14) NOT NULL,
+   data_nas date NOT NULL,
+   PRIMARY KEY(id)
+);
+
+-- insert
+INSERT INTO USER VALUES (01,'Anildo', 'anildomatos@gmail.com', '777.777.777-77', '2000-12-20');
+INSERT INTO USER VALUES (02,'Neymar JR', 'neymarjr10@santosfc.com', '777.777.777-77', '2000-12-20');
+INSERT INTO USER VALUES (03,'Cristiano Ronaldo', 'cr7@alnassrfc.com', '777.777.777-77', '2000-12-20');
+INSERT INTO USER VALUES (04,'Ronaldo Jr', 'ronaldojr@gmail.com', '777.777.777-77', '2000-12-20');
+INSERT INTO USER VALUES (05,'Messi', 'lionelmessi@intermiamifc.com', '777.777.777-77', '2000-12-20');
+INSERT INTO USER VALUES (06,'Dembele', 'dembele@parissaintgermain.com', '777.777.777-77', '2000-12-20');
+INSERT INTO USER VALUES (07,'Everton Ribeiro', 'evertonribeiro@ecbahia.com', '777.777.777-77', '2000-12-20');
+INSERT INTO USER VALUES (08,'Erick Pulga', 'erickpulga@ecbahia.com', '777.777.777-77', '2000/12/20');
+INSERT INTO USER VALUES (09,'De Arrascaeta', 'arrascaeta@crfflamengo.com', '777.777.777-77', '2000/12/20');
+INSERT INTO USER VALUES (10,'Rodrygo', 'rodrygogoes@realmadridcf.com', '777.777.777-77', '2000/12/20');
+
+
+
+-- fetch 
+SELECT * FROM USER;
+
+-- CREATE
+create table endereco(
+  id INT,
+  user_id INT,
+  PRIMARY KEY (id),
+  foreign KEY (user_id) references USER(id)
+);
+
+INSERT INTO endereco VALUES (01,01);
+INSERT INTO endereco Values (02,02);
+
+SELECT * FROM endereco;
