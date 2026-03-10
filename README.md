@@ -41,3 +41,6 @@ INSERT INTO carro VALUES (10, 'Fusion', 'Branco', 124.000, 10);
 
 select * from cliente;
 select * from carro;
+
+
+<img width="1203" height="618" alt="image" src="https://github.com/user-attachments/assets/b15064d1-6d3d-4215-acd7-e2e881b8a6b7" />
